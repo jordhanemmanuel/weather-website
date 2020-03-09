@@ -34,14 +34,14 @@ app.get('', (req, res) => { //get serve para declarar o que ele vai fazer quando
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        text: 'Ajudas aqui'
+        text: 'Não tem nada aqui, somente um Ovo de Páscoa.'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'Sobre',
-        text: 'Sobre o app'
+        text: 'App criado para o curso de NodeJS.'
     })
 })
 
