@@ -5,6 +5,8 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const herokuPort = process.env.PORT || 3000
+//Se o process.env.port não existir, o valor fica 3000
 
 //Define o caminho para configurações do express
 const publicPath = path.join(__dirname, '../public')
@@ -120,7 +122,13 @@ app.get('*', (req, res) => {
     })
 })
 
-const port = 3000
+
+
+// @@@@ USAR BLOCO ABAIXO QUANDO RODAR O SERVIDOR LOCALMENTE E COMENTAR O BLOCO ACIMA@@@@
+/*const port = 3000
 app.listen((port), () => {
     console.log('Server is up on port ' + port)
+})*/
+app.listen((herokuPort), () => {
+    console.log('Server is up on port ' + HerokuPort)
 })

@@ -5,12 +5,13 @@ const search = document.querySelector('input')
 const message1 = document.querySelector('#message-1')
 const message2 = document.querySelector('#message-2')
 const messageLoad = document.querySelector('#message-load')
+const urlInit = "http://localhost:3000"
 message1.textContent, message2.textContent, messageLoad.textContent  = ' '
 
 weatherForm.addEventListener('submit', (e) => { //e é abraviação para event
     e.preventDefault() //se nao botar esse código, a pagina da reload no submit
     messageLoad.textContent += 'Procurando...'
-    fetch("http://localhost:3000/previsao?address="+encodeURIComponent(search.value)).then((response) => {
+    fetch("/previsao?address="+encodeURIComponent(search.value)).then((response) => {
     response.json().then((data) => {
             messageLoad.textContent = ' '
         if (data.error){
