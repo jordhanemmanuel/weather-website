@@ -11,6 +11,15 @@
     <div class="main-content">
         {{>header}}
         {{text}}
+        </br>
+        <p><b>Funcionamento:</b></p>
+        <p>Ao digitar o endereço/nome da cidade, é chamada uma API da MapBox com um JSON contendo informações geográficas do local.</p>
+        <p>Usando a latitude e longitude, é feito uma segunda chamada para uma API da DarkSky, com as informações climáticas.</p>
+        <p>É utilizado arquivos com a extensão <b><u>.hbs</b></u> no lugar de <b><u>.html</u></b> para aumentar o dinamismo e permitir maiores customizações com o JavaScript.</p>
+        </br>
+        <p><b>Links:</b></p>
+        <p><a href="https://darksky.net/">DarkSky</a></p>
+        <p><a href="https://www.mapbox.com/">MapBox</a></p>
     </div>
     {{>rodape}}
 </body>
