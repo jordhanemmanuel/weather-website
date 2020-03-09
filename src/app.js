@@ -130,5 +130,5 @@ app.listen((port), () => {
     console.log('Server is up on port ' + port)
 })*/
 app.listen((herokuPort), () => {
-    console.log('Server is up on port ' + HerokuPort)
+    console.log('Server is up on port ' + herokuPort)
 })
