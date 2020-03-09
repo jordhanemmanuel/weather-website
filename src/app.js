@@ -27,7 +27,7 @@ app.get('', (req, res) => { //get serve para declarar o que ele vai fazer quando
     res.render('index', {
         title: 'Home',
         name: 'Jordhan',
-        info: 'Página inicial!'
+        info: 'Digite o nome de uma cidade, opcionalmente pode ser especificado o estado ou país:'
     })
 })
 
