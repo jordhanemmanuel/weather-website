@@ -15,7 +15,7 @@ const getPrevisao = (geoLocal, callback) => {
             const { temperature:celsius, precipProbability:precipChuva } = body.currently
             const { temperatureHigh:tempMax, temperatureLow:tempMin, summary:resumo } = body.daily.data[0]
             const probChuva = precipChuva * 100
-            const infoResumo = 'Previsao para hoje: ' + resumo
+            const infoResumo = resumo
             const infoChuva = `Temperatura atual está em ${celsius}°C, com ${probChuva}% probabilidade de chuva.`
             const infoTemp = `Temperatura Máxima: ${tempMax}°C | Temperatura Mínima: ${tempMin}°C.`
             callback(undefined, {
